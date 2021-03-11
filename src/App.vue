@@ -1,15 +1,17 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <Header/>
   </div>
-  <router-view/>
 </template>
-
-<style>
-#nav {
-  padding: 30px;
+<script>
+import Header from "./components/Header"
+export default {
+  components: {
+    Header
+  }
 }
+</script>
+<style>
 
 #nav a {
   font-weight: bold;
