@@ -18,6 +18,5 @@ export default {
         text-align: center;
         color: #fff;
         background: rgba(5, 2, 46, 0.664);
-        display: flex;
     }
 </style>
