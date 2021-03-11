@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <AddTodo @add-todo="addTodo"/>
    <Todos :todos="todos" @del-todo="deleteTodo"/>
   </div>
 </template>
@@ -7,10 +8,12 @@
 <script>
 
 import Todos from "../components/Todos"
+import AddTodo from "../components/AddTodo"
 export default {
   name: 'Home',
   components: {
-    Todos
+    Todos,
+    AddTodo
   },
   data() {
     return{
@@ -36,6 +39,9 @@ export default {
   methods: {
     deleteTodo(id){
         this.todos = this.todos.filter(todo => todo.id !== id)
+    },
+    addTodo(newTodo){
+      this.todos = [...this.todos, newTodo]; //Use a spread operator to copy the current todos and add the newTodo 
     }
   }
 }

@@ -19,6 +19,17 @@ export default {
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #ccc;
+}
+
+.btn {
+  padding: .65rem;
+  cursor: pointer;
+  border: none;
+  background-color: #705f83;
+  color: #ccc;
+}
+.btn:hover {
+  background-color: #705f99;
 }
 </style>

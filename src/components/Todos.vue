@@ -1,6 +1,5 @@
 <template>
-  <div>
-      <h1>Todos</h1>
+  <div> 
       <div :key="todo" v-for="todo in todos">
           <TodoItem :todo="todo" @del-todo="$emit('del-todo', todo.id)"/>
       </div>
