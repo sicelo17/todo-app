@@ -1,6 +1,6 @@
 <template>
   <div>
-      <form @submit="addTodo">
+      <form @submit.prevent="addTodo">
           <input type="text" v-model="title" name="title" placeholder="Todo">
           <input type="submit" value="Add" class="btn">
       </form>
@@ -16,8 +16,7 @@ export default {
         }
     },
     methods: {
-        addTodo(e){
-            e.preventDefault ()
+        addTodo(){
             let newTodo = {
             title: this.title,
             completed: false
