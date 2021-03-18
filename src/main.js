@@ -5,10 +5,10 @@ import router from './router'
 // Import the Auth0 configuration
 import { domain, clientId } from "../auth_config.json";
 
-// Import the plugin here
+// Import the plugin
 import { Auth0Plugin } from "./auth";
 
-// Install the authentication plugin here
+// Install the authentication plugin
 Vue.use(Auth0Plugin, {
     domain,
     clientId,
