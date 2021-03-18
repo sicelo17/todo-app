@@ -3,6 +3,7 @@
     <AddTodo @add-todo="addTodo"/>
    <Todos :todos="todos" @del-todo="deleteTodo"/>
   </div>
+
 </template>
 
 <script>
@@ -41,6 +42,6 @@ export default {
     // axios.get() returns a promise 
       .then(res => this.todos = res.data) //this.todos refers to the empty array in data
       .catch(err => console.log(err))
-  }
+}
 }
 </script>

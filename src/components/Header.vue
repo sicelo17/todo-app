@@ -1,8 +1,15 @@
 <template>
   <div class="header">
     <h1>TodoList</h1>
-    <router-link  to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+    <div class="links">
+       <div class="two-links">
+         <router-link  to="/">Home</router-link> |
+      <router-link to="/about">About</router-link>
+       </div>
+    <div class="register">
+      <router-link to="/login">Sign In</router-link>
+    </div>
+    </div>
   </div>
   <router-view/>
 </template>
@@ -18,5 +25,11 @@ export default {
         text-align: center;
         color: #fff;
         background: rgba(5, 2, 46, 0.664);
+        padding-bottom: 2rem;
+        
+    }
+    .links {
+      display: flex;
+        justify-content: space-between;
     }
 </style>
