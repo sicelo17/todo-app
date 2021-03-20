@@ -12,3 +12,10 @@
 # areas currently working on
 - being able to display the login page when the app is loaded
 - redirecting to specific pages on authentication of data
+
+# Things done to try and solve the problem
+- I tried searching for an alternative to Vue.use but to no avail
+
+# Areas being affected by the error
+- The error is preventing the app from displaying
+- There is no authentication that can be done before the error is cleared
