@@ -30,16 +30,17 @@ export default {
   name: "Login",
   setup() {
     const data = reactive({
-      name: '',
+      email: '',
       password: ''
     });
     
     const router = useRouter();
+
     const login = async () => {
-      await fetch('http/localhost:8000/api/login', {
+      await fetch('http://localhost:8000/api/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json'},
-          credentials: 'include',
+          credentials: 'include', // essential for getting back a cookie
           body: JSON.stringify(data)
         });
 

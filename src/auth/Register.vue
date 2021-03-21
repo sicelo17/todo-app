@@ -58,7 +58,11 @@ export default {
       const router = useRouter();
 
       const onSubmit = async () => {
-        
+          await fetch('http://localhost:8000/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json'},
+          body: JSON.stringify(data)
+        });
 
         await router.push('/login');
       }
