@@ -24,6 +24,7 @@
 
 <script>
 import { reactive } from 'vue'
+import { useRouter } from 'vue-router';
 
 export default {
   name: "Login",
@@ -32,7 +33,8 @@ export default {
       name: '',
       password: ''
     });
-
+    
+    const router = useRouter();
     const login = async () => {
       await fetch('http/localhost:8000/api/login', {
           method: 'POST',
@@ -40,6 +42,8 @@ export default {
           credentials: 'include',
           body: JSON.stringify(data)
         });
+
+        await router.push('/');
     }
 
     return {
