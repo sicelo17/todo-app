@@ -19,6 +19,7 @@ export default {
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+    padding: 1.4rem;
 }
 
 #nav a.router-link-exact-active {
