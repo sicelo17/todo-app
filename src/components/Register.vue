@@ -88,7 +88,7 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-margin-left: 40%;
+  margin-left: 40%;
 }
 input[type="submit"]:hover {
   background-color: #705f99;

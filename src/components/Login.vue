@@ -2,15 +2,14 @@
   <div>
     <form @submit.prevent="handleSubmit">
       <h2>LogIn</h2>
-      <label for="email">Email</label>
       <input
         type="email"
         id="yourEmail"
         placeholder="Enter your email address"
         v-model="email"
       />
+      <br />
 
-      <label for="pwd">Password</label>
       <input
         type="password"
         id="yourPassword"
@@ -23,45 +22,47 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
 export default {
   name: "Login",
-  data(){
+  data() {
     return {
-       email: '',
-       password: ''
-    }
+      email: "",
+      password: "",
+    };
   },
   methods: {
     handleSubmit() {
-            let data = {
-                email: this.email,
-                password: this.password,
-            }
-            axios.post('https://jsonplaceholder.typicode.com/users', data)
-                .then(res => console.log(res))
-                .catch(err => console.log(err))
-  }
-}
-}
+      let data = {
+        email: this.email,
+        password: this.password,
+      };
+      axios
+        .post("https://jsonplaceholder.typicode.com/users", data)
+        .then((res) => console.log(res))
+        .catch((err) => console.log(err));
+    },
+  },
+};
 </script>
 
 <style scoped>
 h2 {
-    text-align: center;
+  text-align: center;
 }
 input[type="email"],
 input[type="password"] {
-  width: 90%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  margin: auto;
 }
 input[type="submit"] {
-  width: 30%;
+  width: 25%;
   background-color: #705f83;
   color: white;
   padding: 14px 20px;
@@ -69,6 +70,7 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-left: 40%;
 }
 input[type="submit"]:hover {
   background-color: #705f99;
