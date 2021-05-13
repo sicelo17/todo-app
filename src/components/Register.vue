@@ -44,7 +44,7 @@
 
 <script>
 import { reactive } from 'vue'
-import{ useRouter } from 'vue-router'
+
 export default {
     name: 'Register',
     setup() {
@@ -54,18 +54,8 @@ export default {
         password: '',
         password_confirm: ''
       });
-      const router = useRouter();
-      const onSubmit = async () => {
-          await fetch('http://localhost:8000/api/register', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json'},
-          body: JSON.stringify(data)
-        });
-        await router.push('/login');
-      }
       return {
-        data,
-        onSubmit
+        data
       }
     }
 }
