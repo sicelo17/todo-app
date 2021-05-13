@@ -1,6 +1,6 @@
 <template>
   <div>
-      <form @submit.prevent="onSubmit">
+    <form @submit.prevent="onSubmit">
       <h2>Sign Up</h2>
 
       <input
@@ -10,7 +10,7 @@
         v-model="data.name"
         required
       />
-        <br>
+      <br />
 
       <input
         type="email"
@@ -20,7 +20,7 @@
         required
       />
 
-        <br>
+      <br />
       <input
         type="password"
         id="yourPassword"
@@ -28,9 +28,8 @@
         v-model="data.password"
         required
       />
-      
-      <br>
 
+      <br />
 
       <input
         type="password"
@@ -45,27 +44,27 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
+import { reactive } from "vue";
 
 export default {
-    name: 'Register',
-    setup() {
-      const data = reactive({
-        name: '',
-        email: '',
-        password: '',
-        password_confirm: ''
-      });
-      return {
-        data
-      }
-    }
-}
+  name: "Register",
+  setup() {
+    const data = reactive({
+      name: "",
+      email: "",
+      password: "",
+      password_confirm: "",
+    });
+    return {
+      data,
+    };
+  },
+};
 </script>
 
 <style scoped>
 h2 {
-    text-align: center;
+  text-align: center;
 }
 input[type="email"],
 input[type="text"],
@@ -80,7 +79,8 @@ input[type="password"] {
   margin: auto;
 }
 input[type="submit"] {
-  width: 30%;
+  text-align: center;
+  width: 25%;
   background-color: #705f83;
   color: white;
   padding: 14px 20px;
@@ -88,6 +88,7 @@ input[type="submit"] {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+margin-left: 40%;
 }
 input[type="submit"]:hover {
   background-color: #705f99;
