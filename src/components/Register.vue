@@ -2,7 +2,7 @@
   <div>
       <form @submit.prevent="onSubmit">
       <h2>Sign Up</h2>
-      <label for="name">Name</label>
+
       <input
         type="text"
         id="name"
@@ -10,8 +10,8 @@
         v-model="data.name"
         required
       />
+        <br>
 
-      <label for="email">Email address</label>
       <input
         type="email"
         id="yourEmail"
@@ -20,7 +20,7 @@
         required
       />
 
-      <label for="lname">Password</label>
+        <br>
       <input
         type="password"
         id="yourPassword"
@@ -28,8 +28,10 @@
         v-model="data.password"
         required
       />
+      
+      <br>
 
-      <label for="lname">Confirm Password</label>
+
       <input
         type="password"
         id="yourPassword2"
@@ -68,30 +70,26 @@ h2 {
 input[type="email"],
 input[type="text"],
 input[type="password"] {
-  width: 90%;
+  width: 60%;
   padding: 12px 20px;
   margin: 8px 0;
   display: block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  margin: auto;
 }
 input[type="submit"] {
   width: 30%;
   background-color: #705f83;
   color: white;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 15px 0;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 input[type="submit"]:hover {
   background-color: #705f99;
-}
-div {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
 }
 </style>
