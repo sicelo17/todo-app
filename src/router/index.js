@@ -4,6 +4,7 @@ import About from '../views/About.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
 
+
 const routes = [
   {
     path: '/',
@@ -21,10 +22,11 @@ const routes = [
     component: Login
   },
   {
-    path: '/register',
+    path: '/signup',
     name: 'Register',
     component: Register
-  }
+  },
+
 ]
 
 const router = createRouter({
