@@ -7,7 +7,7 @@
         <router-link to="/about">About</router-link>
       </div>
       <div class="register">
-        <router-link to="/login">Sign In</router-link>
+        <router-link to="/login">Log In</router-link>
       </div>
     </div>
   </div>
@@ -33,5 +33,8 @@ h1 {
 .links {
   display: flex;
   justify-content: space-between;
+}
+.register {
+  margin-right: 2rem;
 }
 </style>

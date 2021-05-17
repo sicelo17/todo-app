@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import About from '../views/About.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
+//import AdminUserList from '..views/AdminUserList.vue'
 
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
     name: 'About',
     component: About
   },
+  /*{
+    path: '/admin/users',
+    name: 'admin-user-list',
+    component: AdminUserList
+  },*/
   {
     path: '/login',
     name: 'Login',
